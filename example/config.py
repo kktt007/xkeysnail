@@ -61,11 +61,11 @@ define_keymap(re.compile("Zeal"), {
 # Emacs-like keybindings in non-Emacs applications
 define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt"), {
     # Cursor
-    K("C-b"): with_mark(K("left")),
-    K("C-f"): with_mark(K("right")),
-    K("C-p"): with_mark(K("up")),
-    K("C-n"): with_mark(K("down")),
-    K("C-h"): with_mark(K("backspace")),
+    K("C-h"): with_mark(K("left")),
+    K("C-l"): with_mark(K("right")),
+    K("C-k"): with_mark(K("up")),
+    K("C-j"): with_mark(K("down")),
+    K("C-m"): with_mark(K("backspace")),
     # Forward/Backward word
     K("M-b"): with_mark(K("C-left")),
     K("M-f"): with_mark(K("C-right")),
@@ -73,14 +73,14 @@ define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt"), {
     K("C-a"): with_mark(K("home")),
     K("C-e"): with_mark(K("end")),
     # Page up/down
-    K("M-v"): with_mark(K("page_up")),
-    K("C-v"): with_mark(K("page_down")),
+    K("M-u"): with_mark(K("page_up")),
+    K("C-p"): with_mark(K("page_down")),
     # Beginning/End of file
     K("M-Shift-comma"): with_mark(K("C-home")),
     K("M-Shift-dot"): with_mark(K("C-end")),
     # Newline
-    K("C-m"): K("enter"),
-    K("C-j"): K("enter"),
+    K("C-;"): K("enter"),
+    #K("C-j"): K("enter"),
     K("C-o"): [K("enter"), K("left")],
     # Copy
     K("C-w"): [K("C-x"), set_mark(False)],
